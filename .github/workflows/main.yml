@@ -19,11 +19,11 @@ jobs:
       run: | 
             brew install rbenv
             echo "hoge1"
-            echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+            echo 'eval "$(rbenv init -)"' \>\> ~/.bash\_profile
             echo "hoge2"
             export RBENV_ROOT=$BREW_ROOT/rbenv/
             echo "hoge3"
-            source ~/.bash_profile
+            source ~/.bash\_profile
             echo "hoge4"
             rbenv install "$(< .ruby-version)"
             echo "hoge5"
