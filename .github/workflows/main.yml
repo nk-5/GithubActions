@@ -19,9 +19,9 @@ jobs:
       run: | 
             brew install rbenv
             echo "hoge1"
-            echo 'eval "$(rbenv init -)"' \>\> ~/.bash\_profile
+            echo 'export PATH="~/.rbenv/shims:/usr/local/bin:$PATH"' \>\> ~/.bash\_profile
             echo "hoge2"
-            export RBENV_ROOT=$BREW_ROOT/rbenv/
+            echo 'eval "$(rbenv init -)"' \>\> ~/.bash\_profile
             echo "hoge3"
             source ~/.bash\_profile
             echo "hoge4"
